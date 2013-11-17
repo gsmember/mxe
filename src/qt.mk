@@ -33,13 +33,11 @@ define $(PKG)_BUILD
         -force-pkg-config \
         -release \
         -exceptions \
-        -static \
         -prefix '$(PREFIX)/$(TARGET)/qt' \
         -prefix-install \
         -script \
         -no-iconv \
         -opengl desktop \
-        -no-webkit \
         -no-glib \
         -no-gstreamer \
         -no-phonon \
@@ -51,6 +49,7 @@ define $(PKG)_BUILD
         -nomake demos \
         -nomake docs \
         -nomake examples \
+	-webkit \
         -qt-sql-sqlite \
         -qt-sql-odbc \
         -qt-sql-psql \
